@@ -1,0 +1,302 @@
+Project documentation
+<---- javadoc command: ---->
+/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Frameworks/jdk.framework/Versions/A/Contents/Home/bin/javadoc
+-sourcepath
+/Users/rohitkandhari/Downloads/DrivingGame
+-source
+1.8
+-classpath
+/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/junit-4.8.2.jar:/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/userlib/pi4j-core.jar:/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/userlib/pi4j-device.jar:/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/userlib/pi4j-gpio-extension.jar:/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/userlib/pi4j-service.jar:/Users/rohitkandhari/Downloads/DrivingGame
+-d
+/Users/rohitkandhari/Downloads/DrivingGame/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/Users/rohitkandhari/Downloads/BlueJ 3.1.5/BlueJ.app/Contents/Resources/Java/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+-doctitle
+DrivingGame
+-windowtitle
+DrivingGame
+-author
+-version
+-nodeprecated
+-package
+-link
+http://download.oracle.com/javase/8/docs/api/
+/Users/rohitkandhari/Downloads/DrivingGame/Path.java
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java
+/Users/rohitkandhari/Downloads/DrivingGame/EndLine.java
+/Users/rohitkandhari/Downloads/DrivingGame/Lives.java
+/Users/rohitkandhari/Downloads/DrivingGame/Dot.java
+/Users/rohitkandhari/Downloads/DrivingGame/PedestrianCrossing.java
+/Users/rohitkandhari/Downloads/DrivingGame/ScoreBoard.java
+/Users/rohitkandhari/Downloads/DrivingGame/Information.java
+/Users/rohitkandhari/Downloads/DrivingGame/CarWorld.java
+/Users/rohitkandhari/Downloads/DrivingGame/Line.java
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java
+/Users/rohitkandhari/Downloads/DrivingGame/Counter.java
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java
+/Users/rohitkandhari/Downloads/DrivingGame/Person.java
+<---- end of javadoc command ---->
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Path.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Background.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/EndLine.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Lives.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Dot.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/PedestrianCrossing.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/ScoreBoard.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Information.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/CarWorld.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Line.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Counter.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Car.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Bomb.java...
+Loading source file /Users/rohitkandhari/Downloads/DrivingGame/Person.java...
+Constructing Javadoc information...
+/Users/rohitkandhari/Downloads/DrivingGame/Path.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Path.java:9: error: cannot find symbol
+public class Path  extends Actor
+                           ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:9: error: cannot find symbol
+public class Background  extends Actor
+                                 ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:11: error: cannot find symbol
+    private Actor collided;
+            ^
+  symbol:   class Actor
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:12: error: cannot find symbol
+    private GreenfootImage image1;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:13: error: cannot find symbol
+    private GreenfootImage image2;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:14: error: cannot find symbol
+    private GreenfootImage image3;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:15: error: cannot find symbol
+    private GreenfootImage image4;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:16: error: cannot find symbol
+    private GreenfootImage image5;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/Background.java:17: error: cannot find symbol
+    private GreenfootImage image6;
+            ^
+  symbol:   class GreenfootImage
+  location: class Background
+/Users/rohitkandhari/Downloads/DrivingGame/EndLine.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/EndLine.java:9: error: cannot find symbol
+public class EndLine  extends Actor
+                              ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Lives.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Lives.java:11: error: cannot find symbol
+public class Lives extends Actor
+                           ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Dot.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Dot.java:9: error: cannot find symbol
+public class Dot  extends Actor
+                          ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/PedestrianCrossing.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/PedestrianCrossing.java:9: error: cannot find symbol
+public class PedestrianCrossing  extends Actor
+                                         ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/ScoreBoard.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/ScoreBoard.java:13: error: cannot find symbol
+public class ScoreBoard extends Actor
+                                ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Information.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Information.java:9: error: cannot find symbol
+public class Information  extends Actor
+                                  ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/CarWorld.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/CarWorld.java:9: error: cannot find symbol
+public class CarWorld extends World
+                              ^
+  symbol: class World
+/Users/rohitkandhari/Downloads/DrivingGame/Line.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Line.java:9: error: cannot find symbol
+public class Line  extends Actor
+                           ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:9: error: cannot find symbol
+public class Vehicle  extends Actor
+                              ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:11: error: cannot find symbol
+    private GreenfootImage image1;
+            ^
+  symbol:   class GreenfootImage
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:12: error: cannot find symbol
+    private GreenfootImage image2;
+            ^
+  symbol:   class GreenfootImage
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:13: error: cannot find symbol
+    private GreenfootImage image3;
+            ^
+  symbol:   class GreenfootImage
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:14: error: cannot find symbol
+    private GreenfootImage image4;
+            ^
+  symbol:   class GreenfootImage
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:15: error: cannot find symbol
+    private Actor collided;
+            ^
+  symbol:   class Actor
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Vehicle.java:16: error: cannot find symbol
+    private Actor collidedVehicle;
+            ^
+  symbol:   class Actor
+  location: class Vehicle
+/Users/rohitkandhari/Downloads/DrivingGame/Counter.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Counter.java:11: error: cannot find symbol
+public class Counter extends Actor
+                             ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java:7: error: cannot find symbol
+public class Car extends Actor
+                         ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java:9: error: cannot find symbol
+    private Actor collidedVehicle;
+            ^
+  symbol:   class Actor
+  location: class Car
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java:10: error: cannot find symbol
+    private Actor collidedPerson;
+            ^
+  symbol:   class Actor
+  location: class Car
+/Users/rohitkandhari/Downloads/DrivingGame/Car.java:11: error: cannot find symbol
+    private Actor collidedBackground;
+            ^
+  symbol:   class Actor
+  location: class Car
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:9: error: cannot find symbol
+public class Bomb  extends Actor
+                           ^
+  symbol: class Actor
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:11: error: cannot find symbol
+    private GreenfootImage image1;
+            ^
+  symbol:   class GreenfootImage
+  location: class Bomb
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:12: error: cannot find symbol
+    private GreenfootImage image2;
+            ^
+  symbol:   class GreenfootImage
+  location: class Bomb
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:13: error: cannot find symbol
+    private Actor collidedVehicle;
+            ^
+  symbol:   class Actor
+  location: class Bomb
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:14: error: cannot find symbol
+    private Actor collidedPerson;
+            ^
+  symbol:   class Actor
+  location: class Bomb
+/Users/rohitkandhari/Downloads/DrivingGame/Bomb.java:15: error: cannot find symbol
+    private Actor collidedBackground;
+            ^
+  symbol:   class Actor
+  location: class Bomb
+/Users/rohitkandhari/Downloads/DrivingGame/Person.java:1: error: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/rohitkandhari/Downloads/DrivingGame/Person.java:9: error: cannot find symbol
+public class Person  extends Actor
+                             ^
+  symbol: class Actor
+Standard Doclet version 1.8.0_31
+Building tree for all the packages and classes...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Background.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Bomb.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Car.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/CarWorld.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Counter.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Dot.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/EndLine.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Information.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Line.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Lives.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Path.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/PedestrianCrossing.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Person.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/ScoreBoard.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/Vehicle.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/package-frame.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/package-summary.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/package-tree.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/constant-values.html...
+Building index for all the packages and classes...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/overview-tree.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/index-all.html...
+Building index for all classes...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/allclasses-frame.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/allclasses-noframe.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/index.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/help-doc.html...
+Generating /Users/rohitkandhari/Downloads/DrivingGame/doc/stylesheet.css...
+51 warnings
