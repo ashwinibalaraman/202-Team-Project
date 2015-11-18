@@ -8,20 +8,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Information  extends Actor
 {
-    /**
+   /* private BackButton bb;
+    public Information()}
+   /**
      * Act - do whatever the Information wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+   /* public void act() 
     {
         click();
     }    
     public void click()
     {
-       if(Greenfoot.mouseClicked(null))
-       {
-          ((CarWorld) getWorld()).pauseGame(false);
-          getWorld().removeObject(this);
-       }
-    }
+        cc.setReceiver(new Receiver() 
+                {                    
+                    public void doAction() //This is actual action which should happen on click on Play Button
+                    {
+                     if(Greenfoot.mouseClicked(cb)){
+                        addObject(new Information(),300,300);                        
+                    }
+                }
+            });
+        cb.setCommand(cc);
+    }*/
 }

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Button
+comment0.text=\r\n\ General\ button\ Interface\ implemented\ by\ all\ types\ of\ buttons.\r\n\ \r\n\ @author\ Spoorthy\ Bhaktavatsala\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=st
+comment1.target=Button(java.lang.String)
+comment2.params=
+comment2.target=void\ initText()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=cmd
+comment4.target=void\ setCommand(Command)
+comment5.params=
+comment5.target=void\ invoke()
+numComments=6
