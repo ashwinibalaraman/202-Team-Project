@@ -122,6 +122,7 @@ public class Car extends ConcreteSubject
         if(collidedFuel != null)
         {
             setState("CollidedFuel");
+
            getWorld().removeObject(collidedFuel);
            Greenfoot.playSound("Explosion.wav");
         }
