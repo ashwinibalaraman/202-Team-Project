@@ -13,7 +13,6 @@ public class Vehicle  extends Actor
     private GreenfootImage image3;
     private GreenfootImage image4;
     private Actor collided;
-    private Actor collidedVehicle;
     public Vehicle()
     {
        image1 = new GreenfootImage("ambulance.png");

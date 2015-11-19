@@ -5,21 +5,20 @@ import java.awt.Font;
 /**
  * Counter that displays a number.
  * 
- * @author Michael Kolling
  * @version 1.0.1
  */
-public class Counter extends Actor
+public class Counter extends ConcreteObserver
 {
-    public static int value = 0;
-    public static int target = 0;
-    public static String text;
-    public static int stringLength;
-    public Counter()
+    private static int value = 0;
+    private static int target = 0;
+    private static String text;
+    private static int stringLength;
+    private static int score;
+   
+    public Counter(String prefix, Car car)
     {
-        this("");
-    }
-    public Counter(String prefix)
-    {
+        super(car);
+        this.subject.attach(this);
         value = 0;
         target = 0;
         text = prefix;
@@ -32,21 +31,36 @@ public class Counter extends Actor
         
         updateImage();
     }
-    public void act()
+   
+    @Override
+    public void update()
     {
-       target = ((CarWorld) getWorld()).getScore();
-       if(value > target)
-       {
-          value = 0;
-          updateImage();
-       }
-       updateImage();
+        Car car = (Car) getWorld().getObjects(Car.class).get(0);
+        if(car.getState() == "CollidedFuel"){
+            
+            ((CarWorld) getWorld()).addScore(500);
+            target = ((CarWorld) getWorld()).getScore();
+            
+            if(value > target)
+            {
+                value = 0;
+                updateImage();
+            }
+            updateImage();
+        }
+       
     }
-    public void add(int score)
+    
+  
+    public static int getTarget()
+    {
+       return target;
+    }
+    /*public void add(int score)
     {
         target += score;
-    }
-    public int getValue()
+    }*/
+    /*public int getValue()
     {
         return value;
     }

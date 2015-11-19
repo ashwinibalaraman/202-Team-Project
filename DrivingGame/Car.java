@@ -4,11 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Car here.
  */ 
 
-public class Car extends Actor
+public class Car extends ConcreteSubject
 {
     private Actor collidedVehicle;
     private Actor collidedPerson;
     private Actor collidedBackground;
+    private Actor collidedFuel;
     private int counter = 0;
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
@@ -25,7 +26,7 @@ public class Car extends Actor
     {
        if(((CarWorld) getWorld()).getPause() == false)
        {
-          if(getX()<400)
+          if(getX()<500)
           {
              if (Greenfoot.isKeyDown("right"))    
              {
@@ -40,7 +41,8 @@ public class Car extends Actor
           {
              if (Greenfoot.isKeyDown("right"))    
              {
-                setLocation( getX()+(1/5), getY() );
+                //setLocation( getX()+(1/5), getY() );
+                setLocation( 500, 550 );
              }
              if (Greenfoot.isKeyDown("left"))    
              {
@@ -94,22 +96,33 @@ public class Car extends Actor
         collidedVehicle = getOneIntersectingObject(Vehicle.class);
         collidedPerson = getOneIntersectingObject(Person.class);
         collidedBackground = getOneIntersectingObject(Background.class);
+        collidedFuel = getOneIntersectingObject(Fuel.class);
         if (collidedVehicle != null)
         {
+       
            getWorld().removeObject(collidedVehicle);
            ((CarWorld) getWorld()).collided();
            Greenfoot.playSound("Explosion.wav");
+           setState("Collided");
         }
         if (collidedPerson != null)
         {
+           setState("Collided");
            getWorld().removeObject(collidedPerson);
            ((CarWorld) getWorld()).collided();
            Greenfoot.playSound("Explosion.wav");
         }
         if(collidedBackground != null)
         {
+     
            getWorld().removeObject(collidedBackground);
            ((CarWorld) getWorld()).collided();
+           Greenfoot.playSound("Explosion.wav");
+        }
+        if(collidedFuel != null)
+        {
+            setState("CollidedFuel");
+           getWorld().removeObject(collidedFuel);
            Greenfoot.playSound("Explosion.wav");
         }
     }

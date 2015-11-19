@@ -19,16 +19,17 @@ public class CarWorld extends World
     public CarWorld()
     {
         super(600, 600, 1);
-        setPaintOrder(Information.class, ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class);
+        setPaintOrder(Information.class, ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class, Fuel.class);
         Greenfoot.playSound("BackgroundMusic.mid");
         lives = 3;
         score = 0;
         pause = true;
-        addObject(new Car(),305,550);
-        addObject(new Counter("Score: "),100,550);
-        addObject(new Lives(),50,50);
-        addObject(new Lives(),100,50);
-        addObject(new Lives(),150,50);
+        Car car = new Car();
+        addObject(car,305,550);
+        addObject(new Counter("Score: ", car),100,550);
+        addObject(new Lives(car),50,50);
+        addObject(new Lives(car),100,50);
+        addObject(new Lives(car),150,50);
         addObject(new Dot(), 25, 395);
         addObject(new Path(), 25, 250);
         addObject(new Line(),300,0);
@@ -58,6 +59,7 @@ public class CarWorld extends World
           chanceToBackground();
           setCounter();
           chanceToPedestrianCrossing();
+          chanceToFuel();
        }
     }
     public void chanceToBackground()
@@ -78,6 +80,15 @@ public class CarWorld extends World
           addObject(new Vehicle(), Greenfoot.getRandomNumber(185)+215, 0);
        }
     }
+    
+    public void chanceToFuel()
+    {
+       if(Greenfoot.getRandomNumber(100)<1)
+       {
+          addObject(new Fuel(), Greenfoot.getRandomNumber(185)+215, 0);
+       }
+    }
+    
     public void setCounter()
     {
        counter++;

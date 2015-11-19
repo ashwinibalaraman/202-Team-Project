@@ -29,15 +29,16 @@ public class Fuel  extends Actor
     {
        if(((CarWorld) getWorld()).getPause() == false)
        {
-          collided = getOneIntersectingObject(PedestrianCrossing.class);
-          if (collided == null)
+          //collided = getOneIntersectingObject(PedestrianCrossing.class);
+          /*if (collided == null)
           {
              setLocation(getX(), getY()+Greenfoot.getRandomNumber(3)+5);
           }
           else
           {
              setLocation(getX(), getY()+Greenfoot.getRandomNumber(4));
-          }
+          }*/
+          setLocation(getX(), getY()+Greenfoot.getRandomNumber(3)+5);
        }
     }
     public void randomImage()
@@ -55,7 +56,7 @@ public class Fuel  extends Actor
            ((CarWorld) getWorld()).addScore(500);
            getWorld().removeObject(this);
         }
-        if (getY()>=(getWorld().getHeight()-1))
+       else if (getY()>=(getWorld().getHeight()-1))
         {
            getWorld().removeObject(this);
         }
