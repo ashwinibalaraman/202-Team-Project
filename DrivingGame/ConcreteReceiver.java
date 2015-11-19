@@ -8,11 +8,13 @@ import greenfoot.*;
 public class ConcreteReceiver extends Actor implements Receiver 
 {
   
+    //public World world1;
     /**
      * Constructor for objects of class ConcreteReceiver
      */
     public ConcreteReceiver()
     {
+        
     }
 
     public void doAction()

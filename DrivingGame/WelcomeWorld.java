@@ -12,6 +12,7 @@ public class WelcomeWorld extends World
     private ControlsButton cb;
     private ControlCommand cc;
     private ReceiverStart sr;
+    private ReceiverControls cr;
     /**
      * Constructor for objects of class WelcomeWorld.
      * 
@@ -42,10 +43,12 @@ public class WelcomeWorld extends World
                 }
             });*/
         sr = new ReceiverStart();
-        //addObject(sr,10,10);
+        addObject(sr,0,0);
         sc.setReceiver(sr);
         sb.setCommand(sc);
-        cc.setReceiver(new ReceiverControls());
+        cr = new ReceiverControls();
+        addObject(cr,0,0);        
+        cc.setReceiver(cr);
         /*cc.setReceiver(new Receiver() 
                 {                    
                     public void doAction() //This is actual action which should happen on click on Play Button
