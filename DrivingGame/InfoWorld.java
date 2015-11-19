@@ -9,12 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class InfoWorld extends World
 {
 
-    private MenuButton bb;
-    private ConcreteCommand bc;
+    private HomeButton bb;
+    private BackCommand bc;
     public InfoWorld(){
         super(500,600,1);
-        bb = new MenuButton("BACK");
-        bc = new ConcreteCommand();
+        bb = new HomeButton("BACK");
+        bc = new BackCommand();
         addObject(bb,236,getHeight()-63);
         click();
     }

@@ -7,5 +7,5 @@
 public interface Command  
 {
     public abstract void execute();
-	public abstract void setReceiver(Receiver target);    
+	public abstract void setReceiver(ConcreteReceiver target);    
 }
