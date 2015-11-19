@@ -11,6 +11,7 @@ public class WelcomeWorld extends World
     private PlayCommand sc;
     private ControlsButton cb;
     private ControlCommand cc;
+    private ReceiverStart sr;
     /**
      * Constructor for objects of class WelcomeWorld.
      * 
@@ -40,7 +41,9 @@ public class WelcomeWorld extends World
                     }
                 }
             });*/
-        sc.setReceiver(new ReceiverHome());
+        sr = new ReceiverStart();
+        //addObject(sr,10,10);
+        sc.setReceiver(sr);
         sb.setCommand(sc);
         cc.setReceiver(new ReceiverControls());
         /*cc.setReceiver(new Receiver() 

@@ -21,7 +21,8 @@ public class InfoWorld extends World
     
     public void click()
     {
-        bc.setReceiver(new Receiver() 
+        bc.setReceiver(new ReceiverHome());
+        /*bc.setReceiver(new Receiver() 
                 {                    
                     public void doAction() //This is actual action which should happen on click on Play Button
                     {
@@ -31,7 +32,7 @@ public class InfoWorld extends World
                          Greenfoot.setWorld(welcomeworld);
                       }
                 }
-            });
+            });*/
         bb.setCommand(bc);
     }
 }
