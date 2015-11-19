@@ -20,19 +20,10 @@ public class InfoWorld extends World
     }
     
     public void click()
-    {
-        bc.setReceiver(new ReceiverHome());
-        /*bc.setReceiver(new Receiver() 
-                {                    
-                    public void doAction() //This is actual action which should happen on click on Play Button
-                    {
-                      if(Greenfoot.mouseClicked(bb))
-                      {
-                         World welcomeworld = new WelcomeWorld();
-                         Greenfoot.setWorld(welcomeworld);
-                      }
-                }
-            });*/
+    {   
+        ReceiverHome hr = new ReceiverHome();
+        addObject(hr,0,0);
+        bc.setReceiver(hr);        
         bb.setCommand(bc);
     }
 }

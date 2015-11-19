@@ -23,7 +23,7 @@ public class WelcomeWorld extends World
         super(600, 600, 1); 
         sb = new StartButton("START");
         sc = new PlayCommand();
-        addObject(sb,450,getHeight()-450);
+        addObject(sb,450,getHeight()-550);
         cb = new ControlsButton("CONTROLS");
         cc = new ControlCommand();
         addObject(cb,450,getHeight()-500);
