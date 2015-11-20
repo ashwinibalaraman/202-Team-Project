@@ -19,8 +19,8 @@ public class CarWorld extends World
     public CarWorld()
     {
         super(600, 600, 1);
-        setPaintOrder(Information.class, ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class, Fuel.class);
-        Greenfoot.playSound("BackgroundMusic.mid");
+        setPaintOrder(ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class);
+        //Greenfoot.playSound("BackgroundMusic.mid");
         lives = 3;
         score = 0;
         pause = true;
@@ -49,7 +49,8 @@ public class CarWorld extends World
         addObject(new Background(), Greenfoot.getRandomNumber(150)+450, Greenfoot.getRandomNumber(600));
         addObject(new Background(), Greenfoot.getRandomNumber(150)+450, Greenfoot.getRandomNumber(600));
         addObject(new Background(), Greenfoot.getRandomNumber(150)+450, Greenfoot.getRandomNumber(600));
-        addObject(new Information(),300,300);
+        //addObject(new Information(),300,300);
+        pause = false; //start game
     }
     public void act()
     {

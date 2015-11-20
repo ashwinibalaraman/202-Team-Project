@@ -134,7 +134,7 @@ public class Car extends ConcreteSubject
           if(((CarWorld) getWorld()).getPause() == false)
           {
              ((CarWorld) getWorld()).pauseGame(true);
-             getWorld().addObject(new Information(),300,300);
+             //getWorld().addObject(new Information(),300,300);
           }
        }
     }
