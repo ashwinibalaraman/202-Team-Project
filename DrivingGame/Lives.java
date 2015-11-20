@@ -5,20 +5,29 @@ import java.awt.Font;
 /**
  * Counter that displays a number.
  * 
- * @author Michael Kolling
  * @version 1.0.1
  */
-public class Lives extends Actor
+public class Lives extends ConcreteObserver
 {
     public static int valueLives = 3;
-    public Lives()
+    public Lives(ConcreteSubject car)
     {
+        super(car);
+        this.subject.attach(this);
         valueLives = 3;
     }
+    
+    
     public void act()
     {
-       valueLives = ((CarWorld) getWorld()).getLives();
-       checkValueLives();
+        
+         if(((Car) getWorld().getObjects(Car.class).get(0)).getState() == "Collided"){
+            valueLives = ((CarWorld) getWorld()).getLives();
+            checkValueLives();
+        }
+
+       
+       
     }
     public void checkValueLives()
     {

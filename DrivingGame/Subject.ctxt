@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=obj
+comment0.target=void\ attach(Observer)
+comment0.text=\n\ An\ example\ of\ a\ method\ header\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ \ \ \ the\ result\ produced\ by\ sampleMethod\ \n
+comment1.params=obj
+comment1.target=void\ detach(Observer)
+comment2.params=
+comment2.target=void\ notifyAllObservers()
+numComments=3
