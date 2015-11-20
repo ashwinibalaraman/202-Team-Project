@@ -12,10 +12,10 @@ public class InfoWorld extends World
     private HomeButton bb;
     private BackCommand bc;
     public InfoWorld(){
-        super(500,600,1);
+        super(600,600,1);
         bb = new HomeButton("BACK");
         bc = new BackCommand();
-        addObject(bb,236,getHeight()-63);
+        addObject(bb,getWidth()/2,getHeight()-63);
         click();
     }
     

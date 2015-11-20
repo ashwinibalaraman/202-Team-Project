@@ -120,7 +120,7 @@ public class Car extends Actor
           if(((CarWorld) getWorld()).getPause() == false)
           {
              ((CarWorld) getWorld()).pauseGame(true);
-             getWorld().addObject(new Information(),300,300);
+             //getWorld().addObject(new Information(),300,300);
           }
        }
     }
