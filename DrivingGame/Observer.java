@@ -14,5 +14,5 @@ public interface Observer
      * @return        the result produced by sampleMethod 
      */
     
-    void update();
+    void update(ConcreteSubject sub);
 }

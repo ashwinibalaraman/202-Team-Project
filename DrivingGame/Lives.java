@@ -1,6 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 
 import java.awt.Font;
+import java.util.List;
 
 /**
  * Counter that displays a number.
@@ -10,6 +11,7 @@ import java.awt.Font;
 public class Lives extends ConcreteObserver
 {
     public static int valueLives = 3;
+    private String state="";
     public Lives(ConcreteSubject car)
     {
         super(car);
@@ -17,41 +19,47 @@ public class Lives extends ConcreteObserver
         valueLives = 3;
     }
     
-    
-    public void act()
+  
+    @Override
+    public void update(ConcreteSubject sub)
     {
-        
-         if(((Car) getWorld().getObjects(Car.class).get(0)).getState() == "Collided"){
-            valueLives = ((CarWorld) getWorld()).getLives();
+       
+         if(this.subject.getState() == "Collided" && state==""){
             checkValueLives();
-        }
-
-       
-       
+             
+           
+        } 
     }
+    
     public void checkValueLives()
     {
-       if(getX() == 150)
+       if(valueLives == 3)
        {
-          if(valueLives == 2)
+          if(getX() == 150)
           {
+              valueLives--;
              getWorld().removeObject(this);
+             state="done";
           }
        }
-       else if(getX() == 100)
+       else if(valueLives == 2)
        {
-          if(valueLives == 1)
+          if(getX() == 100)
           {
+              valueLives--;
              getWorld().removeObject(this);
+             state="done";
           }
        }
-       else if(getX() == 50)
+       else if(valueLives == 1)
        {
-          if(valueLives == 0)
+          if(getX() == 50)
           {
+              valueLives--;
              Greenfoot.stop();
              getWorld().addObject(new ScoreBoard(),300,300);
           }
        }
+   
     }
 }

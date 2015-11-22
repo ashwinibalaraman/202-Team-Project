@@ -81,7 +81,9 @@ public class Car extends ConcreteSubject
           {
              if (Greenfoot.isKeyDown("space"))
              {
-                getWorld().addObject(new Bomb(),getX(),getY());
+                 Bomb bomb = new Bomb();
+                getWorld().addObject(bomb,getX(),getY());
+                bomb.attach((Counter) getWorld().getObjects(Counter.class).get(0));
                 counter = 150;
              }
           }
@@ -99,24 +101,23 @@ public class Car extends ConcreteSubject
         collidedFuel = getOneIntersectingObject(Fuel.class);
         if (collidedVehicle != null)
         {
-       
-           getWorld().removeObject(collidedVehicle);
-           ((CarWorld) getWorld()).collided();
-           Greenfoot.playSound("Explosion.wav");
            setState("Collided");
+           getWorld().removeObject(collidedVehicle);
+           //((CarWorld) getWorld()).collided();
+           Greenfoot.playSound("Explosion.wav");
         }
         if (collidedPerson != null)
         {
            setState("Collided");
            getWorld().removeObject(collidedPerson);
-           ((CarWorld) getWorld()).collided();
+           //((CarWorld) getWorld()).collided();
            Greenfoot.playSound("Explosion.wav");
         }
         if(collidedBackground != null)
         {
      
            getWorld().removeObject(collidedBackground);
-           ((CarWorld) getWorld()).collided();
+           //((CarWorld) getWorld()).collided();
            Greenfoot.playSound("Explosion.wav");
         }
         if(collidedFuel != null)
@@ -124,7 +125,7 @@ public class Car extends ConcreteSubject
             setState("CollidedFuel");
 
            getWorld().removeObject(collidedFuel);
-           Greenfoot.playSound("Explosion.wav");
+           //Greenfoot.playSound("Explosion.wav");
         }
     }
     public void click()

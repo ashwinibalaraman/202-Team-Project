@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CarWorld extends World
 {
     private int counter;
-    private int lives;
-    private int score;
+    //private int lives;
+    //private int score;
     private boolean pause;
      /**
      * Constructor for objects of class CarWorld.
@@ -19,14 +19,15 @@ public class CarWorld extends World
     public CarWorld()
     {
         super(600, 600, 1);
-        setPaintOrder(ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class);
-        //Greenfoot.playSound("BackgroundMusic.mid");
-        lives = 3;
-        score = 0;
+
+        setPaintOrder(Information.class, ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class, Fuel.class);
+        Greenfoot.playSound("BackgroundMusic.mid");
+        //lives = 3;
+        //score = 0;
         pause = true;
         Car car = new Car();
         addObject(car,305,550);
-        addObject(new Counter("Score: ", car),100,550);
+        addObject(new Counter(car),100,550);
         addObject(new Lives(car),50,50);
         addObject(new Lives(car),100,50);
         addObject(new Lives(car),150,50);
@@ -110,7 +111,7 @@ public class CarWorld extends World
           addObject(new Person(), 180, 0);
        }
     }
-    public int getScore()
+    /*public int getScore()
     {
        return score;
     }
@@ -125,7 +126,7 @@ public class CarWorld extends World
     public void collided()
     {
        lives--;
-    }
+    }*/
     public boolean getPause()
     {
        return pause;

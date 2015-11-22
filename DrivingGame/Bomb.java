@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bomb  extends Actor
+public class Bomb  extends ConcreteSubject
 {
     private GreenfootImage image1;
     private GreenfootImage image2;
@@ -41,22 +41,25 @@ public class Bomb  extends Actor
        collidedBackground = getOneIntersectingObject(Background.class);
        if(collidedVehicle != null || collidedPerson != null || collidedBackground != null || getY() == 0)
        {
+           //Counter counter = new Counter(this);
+          setState("CollidedBomb");
           Greenfoot.playSound("Explosion.wav");
           if(collidedVehicle != null)
           {
-             ((CarWorld) getWorld()).addScore(50);
+             //((CarWorld) getWorld()).addScore(50);
              getWorld().removeObject(collidedVehicle);
           }
           if(collidedBackground != null)
           {
-             ((CarWorld) getWorld()).addScore(75);
+             //((CarWorld) getWorld()).addScore(75);
              getWorld().removeObject(collidedBackground);
           }
           if(collidedPerson != null)
           {
-             ((CarWorld) getWorld()).addScore(100);
+             //((CarWorld) getWorld()).addScore(100);
              getWorld().removeObject(collidedPerson);
           }
+          
           getWorld().removeObject(this);
        }
     }

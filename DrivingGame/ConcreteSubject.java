@@ -1,14 +1,15 @@
 import greenfoot.*;
 import java.util.ArrayList;
+
 /**
  * Write a description of class ConcreteSubject here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author shwini Balaraman
+ * @version 1.1
  */
 public class ConcreteSubject extends Actor implements Subject
 {
-    // instance variables - replace the example below with your own
+    
     protected static String subjectState;
     protected ArrayList<Observer> observers = new ArrayList();
 
@@ -49,7 +50,7 @@ public class ConcreteSubject extends Actor implements Subject
     
     public void notifyAllObservers(){
         for (Observer obs : observers){
-            obs.update();
+            obs.update(this);
         }
         
     }

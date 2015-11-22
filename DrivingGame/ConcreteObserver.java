@@ -20,6 +20,6 @@ public class ConcreteObserver extends Actor implements Observer
         this.subject = subject;
     }
 
-    public void update(){
+    public void update(ConcreteSubject sub){
     }
 }

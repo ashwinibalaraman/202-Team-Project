@@ -53,7 +53,6 @@ public class Fuel  extends Actor
     {
         collided = getOneIntersectingObject(Fuel.class);
        if (collided != null){
-           ((CarWorld) getWorld()).addScore(500);
            getWorld().removeObject(this);
         }
        else if (getY()>=(getWorld().getHeight()-1))

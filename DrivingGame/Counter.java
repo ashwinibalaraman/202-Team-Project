@@ -13,15 +13,18 @@ public class Counter extends ConcreteObserver
     private static int target = 0;
     private static String text;
     private static int stringLength;
-    private static int score;
-   
-    public Counter(String prefix, Car car)
+    private static int score =0;
+  
+    public Counter(ConcreteSubject sub)
     {
-        super(car);
+        super(sub);
+        
+        //super(bomb);
         this.subject.attach(this);
+        
         value = 0;
-        target = 0;
-        text = prefix;
+        score = 0;
+        text = "Score: ";
         stringLength = (text.length() + 2) * 16;
 
         setImage(new GreenfootImage(stringLength, 24));
@@ -33,22 +36,34 @@ public class Counter extends ConcreteObserver
     }
    
     @Override
-    public void update()
+    public void update(ConcreteSubject sub)
     {
-        Car car = (Car) getWorld().getObjects(Car.class).get(0);
-        if(car.getState() == "CollidedFuel"){
-            
-            ((CarWorld) getWorld()).addScore(500);
-            target = ((CarWorld) getWorld()).getScore();
-            
-            if(value > target)
+        
+        //Car car = (Car) getWorld().getObjects(Car.class).get(0);
+      
+        
+        if(sub.getState() == "CollidedFuel"){
+                  
+            score += 50;
+
+            if(value > score)
             {
                 value = 0;
                 updateImage();
             }
             updateImage();
         }
-       
+       else if(sub.getState() == "CollidedBomb"){
+           
+           score += 100;
+
+            if(value > score)
+            {
+                value = 0;
+                updateImage();
+            }
+            updateImage();
+        }
     }
     
   
@@ -71,6 +86,6 @@ public class Counter extends ConcreteObserver
     {
         GreenfootImage image = getImage();
         image.clear();
-        image.drawString(text + target, 1, 18);
+        image.drawString(text + score, 1, 18);
     }
 }
