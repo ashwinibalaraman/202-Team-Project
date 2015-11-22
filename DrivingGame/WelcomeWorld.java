@@ -40,7 +40,7 @@ public class WelcomeWorld extends World
         addObject(hb,450,getHeight()-450);
         ccb = new ChoosecarButton("CHOOSE CAR");
         ccc = new ChoosecarCommand();
-        addObject(hb,450,getHeight()-150);
+        addObject(ccb,450,getHeight()-150);
         
         setup();        
     }
