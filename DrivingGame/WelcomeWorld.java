@@ -11,8 +11,16 @@ public class WelcomeWorld extends World
     private PlayCommand sc;
     private ControlsButton cb;
     private ControlCommand cc;
+    private HIghScoreButton hb;
+    private HighCommand hc;
     private ReceiverStart sr;
     private ReceiverControls cr;
+    private ReceiverHigh hr;
+    private ChoosecarButton ccb;
+    private ChoosecarCommand ccc;
+    private ReceiverChoosecar ccr;
+    
+    
     /**
      * Constructor for objects of class WelcomeWorld.
      * 
@@ -27,6 +35,13 @@ public class WelcomeWorld extends World
         cb = new ControlsButton("CONTROLS");
         cc = new ControlCommand();
         addObject(cb,450,getHeight()-500);
+        hb = new HIghScoreButton("HIGH SCORE");
+        hc = new HighCommand();
+        addObject(hb,450,getHeight()-450);
+        ccb = new ChoosecarButton("CHOOSE CAR");
+        ccc = new ChoosecarCommand();
+        addObject(hb,450,getHeight()-150);
+        
         setup();        
     }
     
@@ -49,6 +64,10 @@ public class WelcomeWorld extends World
         cr = new ReceiverControls();
         addObject(cr,0,0);        
         cc.setReceiver(cr);
+        hr = new ReceiverHigh();
+        addObject(hr,0,0);        
+        hc.setReceiver(hr);
+        hb.setCommand(hc);
         /*cc.setReceiver(new Receiver() 
                 {                    
                     public void doAction() //This is actual action which should happen on click on Play Button
@@ -60,6 +79,10 @@ public class WelcomeWorld extends World
                 }
             });*/
         cb.setCommand(cc);
+        ccr = new ReceiverChoosecar();
+        addObject(ccr,0,0);
+        ccc.setReceiver(ccr);
+        ccb.setCommand(ccc);
         
     }
 }
