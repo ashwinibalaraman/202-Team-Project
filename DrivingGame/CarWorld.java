@@ -20,7 +20,7 @@ public class CarWorld extends World
     {
         super(600, 600, 1);
 
-        setPaintOrder(Information.class, ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class, Fuel.class);
+        setPaintOrder(ScoreBoard.class, Dot.class, Path.class, Car.class, Bomb.class, Vehicle.class, Person.class, PedestrianCrossing.class,EndLine.class, Line.class, Counter.class, Lives.class, Background.class, Fuel.class);
         Greenfoot.playSound("BackgroundMusic.mid");
         //lives = 3;
         //score = 0;
