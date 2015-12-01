@@ -7,7 +7,7 @@
 public class PlayCommand  implements Command
 {
     // instance variables - replace the example below with your own
-    private ConcreteReceiver rec;
+    private Receiver rec;// changed from concrete receiver to Receiver
 
     /**
      * Constructor for objects of class StartCommand

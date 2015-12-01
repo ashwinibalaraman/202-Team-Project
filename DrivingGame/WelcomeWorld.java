@@ -8,18 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WelcomeWorld extends World
 {
     private StartButton sb;
-    private PlayCommand sc;
-    private ControlsButton cb;
-    private ControlCommand cc;
+    private ControlsButton cb;    
     private HIghScoreButton hb;
-    private HighCommand hc;
-    private ReceiverStart sr;
-    private ReceiverControls cr;
-    private ReceiverHigh hr;
     private ChoosecarButton ccb;
-    private ChoosecarCommand ccc;
-    private ReceiverChoosecar ccr;
-    
     
     /**
      * Constructor for objects of class WelcomeWorld.
@@ -29,57 +20,45 @@ public class WelcomeWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
-        sb = new StartButton("START");
-        sc = new PlayCommand();
+        sb = new StartButton("START");        
         addObject(sb,450,getHeight()-550);
-        cb = new ControlsButton("CONTROLS");
-        cc = new ControlCommand();
+        
+        cb = new ControlsButton("CONTROLS");        
         addObject(cb,450,getHeight()-500);
-        hb = new HIghScoreButton("HIGH SCORE");
-        hc = new HighCommand();
+        
+        hb = new HIghScoreButton("HIGH SCORE");        
         addObject(hb,450,getHeight()-450);
-        ccb = new ChoosecarButton("CHOOSE CAR");
-        ccc = new ChoosecarCommand();
+        
+        ccb = new ChoosecarButton("CHOOSE CAR");       
         addObject(ccb,450,getHeight()-150);
         
         setup();        
     }
     
     private void setup(){
-        /*sc.setReceiver(new Receiver() 
-                {                    
-                    public void doAction() //This is actual action which should happen on click on Play Button
-                    {
-                     if(Greenfoot.mouseClicked(sb)){
-                         World carworld = new CarWorld();
-                         Greenfoot.setWorld(carworld);
-                        
-                    }
-                }
-            });*/
-        sr = new ReceiverStart();
+       
+        PlayCommand sc = new PlayCommand(); 
+        ControlCommand cc = new ControlCommand();
+        HighCommand hc = new HighCommand();
+        ChoosecarCommand ccc = new ChoosecarCommand();
+        
+        ReceiverStart sr = new ReceiverStart();
         addObject(sr,0,0);
         sc.setReceiver(sr);
         sb.setCommand(sc);
-        cr = new ReceiverControls();
+        
+        ReceiverControls cr = new ReceiverControls();
         addObject(cr,0,0);        
         cc.setReceiver(cr);
-        hr = new ReceiverHigh();
+        cb.setCommand(cc);
+        
+        ReceiverHigh hr = new ReceiverHigh();
         addObject(hr,0,0);        
         hc.setReceiver(hr);
         hb.setCommand(hc);
-        /*cc.setReceiver(new Receiver() 
-                {                    
-                    public void doAction() //This is actual action which should happen on click on Play Button
-                    {
-                     if(Greenfoot.mouseClicked(cb)){
-                        World infoworld = new InfoWorld();
-                         Greenfoot.setWorld(infoworld);                        
-                    }
-                }
-            });*/
-        cb.setCommand(cc);
-        ccr = new ReceiverChoosecar();
+        
+        
+        ReceiverChoosecar ccr = new ReceiverChoosecar();
         addObject(ccr,0,0);
         ccc.setReceiver(ccr);
         ccb.setCommand(ccc);
