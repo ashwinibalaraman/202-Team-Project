@@ -1,1 +1,3 @@
-# Road Rage 2D Game; 202-Team-Project
+# Road Rage 2D Game; 
+
+The game code has fetures that demonstrate the design patterns: Observer, State, Factory and Command.
